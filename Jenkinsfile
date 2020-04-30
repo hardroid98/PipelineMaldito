@@ -3,9 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps{
-        sh """
-           gradle clean assembleDebug
-           """
+        sh './gradlew clean assembleDebug'
       }
     }
 
