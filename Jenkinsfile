@@ -9,7 +9,7 @@ pipeline {
 
     stage('Unit Test') {
       steps {
-        sh './gradlew app:testDummyDebugUnitTest'
+        sh './gradlew testDebugUnitTest'
       }
     }
 
