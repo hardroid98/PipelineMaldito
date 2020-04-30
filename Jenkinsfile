@@ -15,7 +15,10 @@ pipeline {
 
     stage('Jacoco Code Coverage') {
       steps {
-        echo "Jacoco Code Coverage Dummy"
+            sh 'chmod +x gradlew'
+            sh './gradlew build -x test --no-daemon'
+            sh './gradlew test jacocoTestReport --no-daemon'
+        }
       }
     }
 
