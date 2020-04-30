@@ -19,7 +19,6 @@ pipeline {
             sh './gradlew build -x test --no-daemon'
             sh './gradlew test jacocoTestReport --no-daemon'
         }
-      }
     }
 
     stage('Lint Checks') {
