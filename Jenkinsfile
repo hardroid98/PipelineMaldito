@@ -3,7 +3,9 @@ pipeline {
   stages {
     stage('Build') {
       steps{
-        echo "Build Dummy"
+        sh """
+           gradle clean assembleDebug
+           """
       }
     }
 
